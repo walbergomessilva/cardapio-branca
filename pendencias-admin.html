@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendências da Live - Admin</title>
+    <script>
+        // Função para carregar as pendências do localStorage
+        function carregarPendencias() {
+            const pendencias = JSON.parse(localStorage.getItem("pendencias")) || [];
+            const listaPendencias = document.getElementById("listaPendencias");
+            listaPendencias.innerHTML = "";  // Limpa a lista atual
+
+            pendencias.forEach((pendencia, index) => {
+                const item = document.createElement("li");
+                item.innerHTML = `
+                    <span>${pendencia}</span>
+                    <button onclick="editarPendencia(${index})">Editar</button>
+                    <button onclick="excluirPendencia(${index})">Excluir</button>
+                `;
+                listaPendencias.appendChild(item);
+            });
+        }
+
+        // Função para adicionar pendência
+        function adicionarPendencia() {
+            const novaPendencia = document.getElementById("novaPendencia").value;
+            if (novaPendencia.trim() !== "") {
+                const pendencias = JSON.parse(localStorage.getItem("pendencias")) || [];
+                pendencias.push(novaPendencia);
+                localStorage.setItem("pendencias", JSON.stringify(pendencias));
+                document.getElementById("novaPendencia").value = "";  // Limpa o campo
+                carregarPendencias();  // Recarrega a lista
+            }
+        }
+
+        // Função para editar uma pendência
+        function editarPendencia(index) {
+            const pendencias = JSON.parse(localStorage.getItem("pendencias"));
+            const novaDescricao = prompt("Editar pendência:", pendencias[index]);
+            if (novaDescricao) {
+                pendencias[index] = novaDescricao;
+                localStorage.setItem("pendencias", JSON.stringify(pendencias));
+                carregarPendencias();  // Recarrega a lista
+            }
+        }
+
+        // Função para excluir uma pendência
+        function excluirPendencia(index) {
+            const pendencias = JSON.parse(localStorage.getItem("pendencias"));
+            pendencias.splice(index, 1);  // Remove a pendência
+            localStorage.setItem("pendencias", JSON.stringify(pendencias));
+            carregarPendencias();  // Recarrega a lista
+        }
+
+        // Carrega as pendências assim que a página carregar
+        window.onload = carregarPendencias;
+    </script>
+</head>
+<body>
+
+<h1>Pendências da Live - Administração</h1>
+
+<!-- Campo para adicionar nova pendência -->
+<input type="text" id="novaPendencia" placeholder="Nova Pendência">
+<button onclick="adicionarPendencia()">Adicionar</button>
+
+<h2>Lista de Pendências</h2>
+<ul id="listaPendencias"></ul>
+
+</body>
+</html>

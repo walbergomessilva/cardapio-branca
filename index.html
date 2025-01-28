@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio da Live - Branca Scarnera</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Ajustando a capa da live para ocupar 100% da largura da tela */
+        .header-img {
+            width: 100%;
+            height: auto;
+        }
+    
+        /* Estilos do botão, incluindo o GIF escondido inicialmente */
+        .btn-pagar {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            background-color: transparent; /* Torna o fundo transparente */
+            background-image: url(/* 'background-image.gif'*/); /* Adiciona a imagem ao fundo */
+            background-size: cover; /* Ajusta a imagem ao tamanho do botão */
+            background-position: center; /* Centraliza a imagem */
+            background-repeat: no-repeat; /* Evita repetição da imagem */
+            border-radius: 8px; /* Deixa o botão arredondado */
+        }
+    
+        .btn-pagar img {
+            position: absolute;
+            right: 10px;
+            width: 35%;
+            display: none;
+        }
+    
+        .btn-pagar:hover img {
+            display: block;
+        }
+    
+        .btn-pagar:hover {
+            opacity: 0.9; /* Suaviza o hover */
+        }
+
+    </style>      
+<header class="bg-blue-900 text-white py-1 text-center" style="background-color:bg-blue-900 background-size: cover;">
+    <!-- Capa da Live com link -->
+    <a href="https://www.twitch.tv/branca" target="_blank">
+        <img src="branca-capa.jpg" alt="Capa da Live" class="header-img">
+    </a>
+    <h1 class="text-3xl font-bold mt-4">Cardápio da Live - Branca Scarnera</h1>
+    <p class="text-lg mt-2">
+        <img src="rato2.gif" alt="Rato animado" class="inline-block" style="width: 40px; height: auto; vertical-align: middle;">
+        Todos tem seu preço! Esses são os meus:
+    </p>
+
+</header>
+    
+ <!-- Menu Horizontal -->
+<div class="bg-blue-900 text-white py-3">
+    <div class="container mx-auto flex justify-center space-x-10">
+        <a href="index.html" class="text-lg font-semibold hover:underline">Cardápio</a>
+        <a href="pendencias.html" class="text-lg font-semibold hover:underline">Pendências</a>
+    </div>
+</div>
+
+    <main class="max-w-4xl mx-auto mt-8 p-4">
+        <!-- Filmes -->
+        <section class="mb-8">
+            <h2 class="text-xl font-semibold mb-4">🎬 Filmes</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="p-4 bg-white shadow-md rounded-lg">
+                    <p>1h00 - <strong>60 reais</strong></p>
+                    <div class="btn-pagar">
+                        <a href="https://pixgg.com/branca" target="_blank" class="bg-blue-900 text-white px-4 py-2 inline-block rounded">
+                            Pagar
+                        </a>
+                        <img src="rato.gif" alt="Gif" class="btn-gif">
+                    </div>
+                </div>
+                <div class="p-4 bg-white shadow-md rounded-lg">
+                    <p>1h30 - <strong>90 reais</strong></p>
+                    <div class="btn-pagar">
+                        <a href="https://pixgg.com/branca" target="_blank" class="bg-blue-900 text-white px-4 py-2 inline-block rounded">
+                            Pagar
+                        </a>
+                        <img src="rato.gif" alt="Gif" class="btn-gif">
+                    </div>
+                </div>
+                <div class="p-4 bg-white shadow-md rounded-lg">
+                    <p>2h00 - <strong>120 reais</strong></p>
+                    <div class="btn-pagar">
+                        <a href="https://pixgg.com/branca" target="_blank" class="bg-blue-900 text-white px-4 py-2 inline-block rounded">
+                            Pagar
+                        </a>
+                        <img src="rato.gif" alt="Gif" class="btn-gif">
+                    </div>
+                </div>
+                <div class="p-4 bg-white shadow-md rounded-lg">
+                    <p>2h30 - <strong>150 reais</strong></p>
+                    <div class="btn-pagar">
+                        <a href="https://pixgg.com/branca" target="_blank" class="bg-blue-900 text-white px-4 py-2 inline-block rounded">
+                            Pagar
+                        </a>
+                        <img src="rato.gif" alt="Gif" class="btn-gif">
+                    </div>
+                </div>
+                <div class="p-4 bg-white shadow-md rounded-lg">
+                    <p>3h00 - <strong>300 reais</strong></p>
+                    <div class="btn-pagar">
+                        <a href="https://pixgg.com/branca" target="_blank" class="bg-blue-900 text-white px-4 py-2 inline-block rounded">
+                            Pagar
+                        </a>
+                        <img src="rato.gif" alt="Gif" class="btn-gif">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- Séries -->
+        <section class="mb-8">
+            <h2 class="text-xl font-semibold mb-4">📺 Séries</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="p-4 bg-white shadow-md rounded-lg">
+                    <p>45 min - <strong>50 reais</strong></p>
+                    <div class="btn-pagar">
+                        <a href="https://pixgg.com/branca" target="_blank" class="bg-blue-900 text-white px-4 py-2 inline-block rounded">
+                            Pagar
+                        </a>
+                        <img src="rato.gif" alt="Gif" class="btn-gif">
+                    </div>
+                </div>
+                <div class="p-4 bg-white shadow-md rounded-lg">
+                    <p>1h00 - <strong>60 reais</strong></p>
+                    <div class="btn-pagar">
+                        <a href="https://pixgg.com/branca" target="_blank" class="bg-blue-900 text-white px-4 py-2 inline-block rounded">
+                            Pagar
+                        </a>
+                        <img src="rato.gif" alt="Gif" class="btn-gif">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subcategorias dentro de Filmes -->
+        <section class="mb-8">
+            <h3 class="text-lg font-semibold mb-4">⏩ Furar fila (Fast Pass)</h3>
+            <div class="p-4 bg-white shadow-md rounded-lg">
+                <p>Seu filme ou série já pago será o próximo a ser assistido! - <strong>60 reais</strong></p>
+                <div class="btn-pagar">
+                    <a href="https://pixgg.com/branca" target="_blank" class="bg-blue-900 text-white px-4 py-2 inline-block rounded">
+                        Pagar
+                    </a>
+                    <img src="rato.gif" alt="Gif" class="btn-gif">
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-lg font-semibold mb-4">⏰ Horário Nobre (21h00 - 21h30)</h3>
+            <div class="p-4 bg-white shadow-md rounded-lg">
+                <p><strong>100 reais</strong></p>
+                <div class="btn-pagar">
+                    <a href="https://pixgg.com/branca" target="_blank" class="bg-blue-900 text-white px-4 py-2 inline-block rounded">
+                        Pagar
+                    </a>
+                    <img src="rato.gif" alt="Gif" class="btn-gif">
+                </div>
+            </div>
+        </section>
+
+        <!-- Vaquinhas -->
+        <section class="mb-8">
+            <h2 class="text-xl font-semibold mb-4">🐄 Vaquinhas</h2>
+            <div class="p-4 bg-white shadow-md rounded-lg">
+                <p>Jogue algo comigo (com voice ou sem) - <strong>100 reais a hora</strong></p>
+                <div class="btn-pagar">
+                    <a href="https://pixgg.com/branca" target="_blank" class="bg-blue-900 text-white px-4 py-2 inline-block rounded">
+                        Pagar
+                    </a>
+                    <img src="rato.gif" alt="Gif" class="btn-gif">
+                </div>
+            </div>
+        </section>
+
+        <!-- Confraternização -->
+        <section class="mb-8">
+            <h2 class="text-xl font-semibold mb-4">🍻 Confraternização</h2>
+            <div class="p-4 bg-white shadow-md rounded-lg">
+                <p>Vamos fazer algo que envolva todo mundo do chat! (Gartic Phone, Perguntados, Habbo, Karaokê) - <strong>100 reais a hora</strong></p>
+                <div class="btn-pagar">
+                    <a href="https://pixgg.com/branca" target="_blank" class="bg-blue-900 text-white px-4 py-2 inline-block rounded">
+                        Pagar
+                    </a>
+                    <img src="rato.gif" alt="Gif" class="btn-gif">
+                </div>
+            </div>
+        </section>
+
+        <!-- Áudio ou vídeo de aniversário -->
+        <section class="mb-8">
+            <h2 class="text-xl font-semibold mb-4">🎉 Áudio ou vídeo de aniversário</h2>
+            <div class="p-4 bg-white shadow-md rounded-lg">
+                <p><strong>30 reais</p></strong></p>
+                <div class="btn-pagar">
+                    <a href="https://pixgg.com/branca" target="_blank" class="bg-blue-900 text-white px-4 py-2 inline-block rounded">
+                        Pagar
+                    </a>
+                    <img src="rato.gif" alt="Gif" class="btn-gif">
+                </div>
+            </div>
+        </section>
+
+        <!-- Lives no Discord -->
+        <section class="mb-8">
+            <h2 class="text-xl font-semibold mb-4">💬 Lives no Discord</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="p-4 bg-white shadow-md rounded-lg">
+                    <p>Omegle, jogos e filmes +18 - <strong>150 reais a hora</strong></p>
+                    <div class="btn-pagar">
+                        <a href="https://pixgg.com/branca" target="_blank" class="bg-blue-900 text-white px-4 py-2 inline-block rounded">
+                            Pagar
+                        </a>
+                        <img src="rato.gif" alt="Gif" class="btn-gif">
+                    </div>
+                </div>
+                <div class="p-4 bg-white shadow-md rounded-lg">
+                    <p>Live de IRL (Faxina, Artesanato, Cozinhando) - <strong>125 reais a hora</strong></p>
+                    <div class="btn-pagar">
+                        <a href="https://pixgg.com/branca" target="_blank" class="bg-blue-900 text-white px-4 py-2 inline-block rounded">
+                            Pagar
+                        </a>
+                        <img src="rato.gif" alt="Gif" class="btn-gif">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live só para subs -->
+<section class="mb-8">
+    <h2 class="text-xl font-semibold mb-4">🎮 Live só pra subs</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="p-4 bg-white shadow-md rounded-lg">
+            <p>4 horas - <strong>300 reais</strong></p>
+            <div class="btn-pagar">
+                <a href="https://pixgg.com/branca" target="_blank" class="bg-blue-900 text-white px-4 py-2 inline-block rounded">
+                    Pagar
+                </a>
+                <img src="rato.gif" alt="Gif" class="btn-gif">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Chat só para subs -->
+<section class="mb-8">
+    <h2 class="text-xl font-semibold mb-4">💬 Chat só pra subs</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="p-4 bg-white shadow-md rounded-lg">
+            <p>2 horas - <strong>100 reais</strong></p>
+            <div class="btn-pagar">
+                <a href="https://pixgg.com/branca" target="_blank" class="bg-blue-900 text-white px-4 py-2 inline-block rounded">
+                    Pagar
+                </a>
+                <img src="rato.gif" alt="Gif" class="btn-gif">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Noite de crimes -->
+<section class="mb-8">
+    <h2 class="text-xl font-semibold mb-4">🕵️‍♀️ Noite de crimes</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="p-4 bg-white shadow-md rounded-lg">
+            <p>Live toda - <strong>150 reais</strong></p>
+            <div class="btn-pagar">
+                <a href="https://pixgg.com/branca" target="_blank" class="bg-blue-900 text-white px-4 py-2 inline-block rounded">
+                    Pagar
+                </a>
+                <img src="rato.gif" alt="Gif" class="btn-gif">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Chat apenas emotes -->
+<section class="mb-8">
+    <h2 class="text-xl font-semibold mb-4">😀 Chat apenas emotes</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="p-4 bg-white shadow-md rounded-lg">
+            <p>1 hora - <strong>100 reais</strong></p>
+            <div class="btn-pagar">
+                <a href="https://pixgg.com/branca" target="_blank" class="bg-blue-900 text-white px-4 py-2 inline-block rounded">
+                    Pagar
+                </a>
+                <img src="rato.gif" alt="Gif" class="btn-gif">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- React de vídeos do Youtube -->
+<section class="mb-8">
+    <h2 class="text-xl font-semibold mb-4">📹 React de vídeos do Youtube</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="p-4 bg-white shadow-md rounded-lg">
+            <p>6 minutos - <strong>11 reais + 1 real/min adicional</strong></p>
+            <div class="btn-pagar">
+                <a href="https://pixgg.com/branca" target="_blank" class="bg-blue-900 text-white px-4 py-2 inline-block rounded">
+                    Pagar
+                </a>
+                <img src="rato.gif" alt="Gif" class="btn-gif">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- React vídeo do TikTok -->
+<section class="mb-8">
+    <h2 class="text-xl font-semibold mb-4">🎥 React vídeo do TikTok</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="p-4 bg-white shadow-md rounded-lg">
+            <p>5 reais por vídeo</p>
+            <div class="btn-pagar">
+                <a href="https://pixgg.com/branca" target="_blank" class="bg-blue-900 text-white px-4 py-2 inline-block rounded">
+                    Pagar
+                </a>
+                <img src="rato.gif" alt="Gif" class="btn-gif">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Escolha de jogo -->
+<section class="mb-8">
+    <h2 class="text-xl font-semibold mb-4">🎮 Escolha de jogo</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="p-4 bg-white shadow-md rounded-lg">
+            <p>2 horas - <strong>150 reais</strong></p>
+            <div class="btn-pagar">
+                <a href="https://pixgg.com/branca" target="_blank" class="bg-blue-900 text-white px-4 py-2 inline-block rounded">
+                    Pagar
+                </a>
+                <img src="rato.gif" alt="Gif" class="btn-gif">
+            </div>
+        </div>
+        <div class="p-4 bg-white shadow-md rounded-lg">
+            <p>6 horas - <strong>300 reais</strong></p>
+            <div class="btn-pagar">
+                <a href="https://pixgg.com/branca" target="_blank" class="bg-blue-900 text-white px-4 py-2 inline-block rounded">
+                    Pagar
+                </a>
+                <img src="rato.gif" alt="Gif" class="btn-gif">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Jogos proibidos -->
+<section class="mb-8">
+    <h2 class="text-xl font-semibold mb-4">🚫 Jogos proibidos</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="p-4 bg-white shadow-md rounded-lg">
+            <p>1 hora - <strong>150 reais</strong></p>
+            <div class="btn-pagar">
+                <a href="https://pixgg.com/branca" target="_blank" class="bg-blue-900 text-white px-4 py-2 inline-block rounded">
+                    Pagar
+                </a>
+                <img src="rato.gif" alt="Gif" class="btn-gif">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Leitura - Booktuber -->
+<section class="mb-8">
+    <h2 class="text-xl font-semibold mb-4">📚 Leitura - Booktuber</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="p-4 bg-white shadow-md rounded-lg">
+            <p>30 reais por capítulo</p>
+            <div class="btn-pagar">
+                <a href="https://pixgg.com/branca" target="_blank" class="bg-blue-900 text-white px-4 py-2 inline-block rounded">
+                    Pagar
+                </a>
+                <img src="rato.gif" alt="Gif" class="btn-gif">
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("dropdown-menu");
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+</script>
+    </main>
+  
+    <!-- Login -->
+    <footer>
+    <div class="footer-container" style="text-align: right; padding: 10px;">
+      <a href="login.html">
+        <img src="chave.png" alt="Login" style="width: 40px; height: auto; cursor: pointer;">
+      </a>
+    </div>
+     </footer> 
+
+</body>
+</html>

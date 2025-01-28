@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+    <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-6 text-center">Login</h2>
+        <form id="loginForm">
+            <label class="block text-gray-700 mb-2">Usuário:</label>
+            <input type="text" id="username" class="border rounded w-full py-2 px-3 mb-4" required>
+
+            <label class="block text-gray-700 mb-2">Senha:</label>
+            <input type="password" id="password" class="border rounded w-full py-2 px-3 mb-4" required>
+
+            <button type="submit" class="bg-blue-600 text-white w-full py-2 rounded hover:bg-blue-700">
+                Entrar
+            </button>
+        </form>
+        <p id="errorMessage" class="text-red-500 text-center mt-4 hidden">Usuário ou senha incorretos!</p>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Verifica credenciais
+            if (username === 'ratabranca' && password === 'ovY36r&Z') {
+                window.location.href = "pendencias-admin.html";
+            } else {
+                document.getElementById('errorMessage').classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

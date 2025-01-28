@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendências da Live - Branca</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Ajustando a capa da live para ocupar 100% da largura da tela */
+        .header-img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Estilos do botão, incluindo o GIF escondido inicialmente */
+        .btn-pagar {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            background-color: transparent; /* Torna o fundo transparente */
+            background-image: url('background-image.gif'); /* Adiciona a imagem ao fundo */
+            background-size: cover; /* Ajusta a imagem ao tamanho do botão */
+            background-position: center; /* Centraliza a imagem */
+            background-repeat: no-repeat; /* Evita repetição da imagem */
+            border-radius: 8px; /* Deixa o botão arredondado */
+        }
+
+        .btn-pagar img {
+            position: absolute;
+            right: 10px;
+            width: 35%;
+            display: none;
+        }
+
+        .btn-pagar:hover img {
+            display: block;
+        }
+
+        .btn-pagar:hover {
+            opacity: 0.9; /* Suaviza o hover */
+        }
+    </style>      
+</head>
+<body>
+
+<!-- Header da Página Pendências -->
+<header class="bg-blue-900 text-white py-1 text-center" style="background-color:bg-blue-600 background-size: cover;">
+    <!-- Capa da Live com link -->
+    <a href="https://www.twitch.tv/branca" target="_blank">
+        <img src="branca-capa.jpg" alt="Capa da Live" class="header-img">
+    </a>
+    <h1 class="text-3xl font-bold mt-4">Pendências da Live - Branca</h1>
+    <p class="text-lg mt-2">
+        <img src="rato2.gif" alt="Rato animado" class="inline-block" style="width: 40px; height: auto; vertical-align: middle;">
+        Aqui estão as pendências para a live de Branca:
+    </p>
+</header>
+
+<!-- Menu Horizontal -->
+<div class="bg-blue-900 text-white py-3">
+    <div class="container mx-auto flex justify-center space-x-10">
+        <a href="index.html" class="text-lg font-semibold hover:underline">Cardápio</a>
+        <a href="pendencias.html" class="text-lg font-semibold hover:underline">Pendências</a>
+    </div>
+</div>
+
+<!-- Lista de Pendências -->
+<section class="py-6">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-blue-900 mb-4">Pendências da Live</h2>
+        <ul class="list-none space-y-4" id="listaPendencias">
+            <!-- As pendências serão inseridas aqui via JavaScript -->
+        </ul>
+    </div>
+</section>
+
+    <!-- Login -->
+    <footer>
+        <div class="footer-container" style="text-align: right; padding: 10px;">
+          <a href="login.html">
+            <img src="chave.png" alt="Login" style="width: 40px; height: auto; cursor: pointer;">
+          </a>
+        </div>
+         </footer> 
+
+<script>
+    // Função para carregar e exibir as pendências do localStorage
+    function carregarPendencias() {
+        const pendencias = JSON.parse(localStorage.getItem("pendencias")) || [];
+        const listaPendencias = document.getElementById("listaPendencias");
+        listaPendencias.innerHTML = "";  // Limpa a lista atual
+
+        pendencias.forEach(pendencia => {
+            const item = document.createElement("li");
+            item.classList.add("text-2xl", "font-semibold", "text-gray-800");
+            item.textContent = pendencia;  // Exibe o texto da pendência
+            listaPendencias.appendChild(item);
+        });
+    }
+
+    // Carrega as pendências assim que a página carregar
+    window.onload = carregarPendencias;
+</script>
+
+</body>
+</html>

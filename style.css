@@ -1,0 +1,50 @@
+.btn-pagar {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+.btn-pagar img {
+    position: absolute;
+    right: 10px;
+    width: 35%;
+    display: none;
+}
+
+.btn-pagar:hover img {
+    display: block;
+}
+
+.primeiro-botao a {
+    background-image: url('sua-imagem-de-fundo.jpg'); /* Caminho da imagem */
+    background-size: cover; /* Ajusta o tamanho da imagem ao botão */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede repetição da imagem */
+    color: white; /* Caso precise ajustar o texto sobre a imagem */
+}
+
+.primeiro-botao a:hover {
+    opacity: 0.9; /* Suaviza o hover */
+}
+
+.header-container {
+    position: relative;
+  }
+  
+  .login-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px; /* Tamanho pequeno e proporcional */
+    height: auto;
+    cursor: pointer;
+  }
+  
+
+.btn-pagar:hover {
+    background-image: url('background-image.gif');
+    background-size: cover;
+    background-position: center;
+}
